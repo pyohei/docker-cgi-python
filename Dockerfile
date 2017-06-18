@@ -1,5 +1,8 @@
+# Docker file for python simple webservice build
+
 FROM ubuntu:16.10
 MAINTAINER Shohei Mukai
+
 Run apt-get update
 Run apt-get -y install apache2
 Run apt-get -y install python2.7
@@ -8,6 +11,12 @@ RUN apt-get -y install vim
 RUN apt-get -y install python-pip
 RUN pip install MySQL-python
 RUN apt-get -y install python3.6
+Run apt-get -y install wget
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN python3.6 get-pip.py
+RUN apt-get -y install python3.6-dev
+
+RUN python3.6 -m pip install mysqlclient
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
