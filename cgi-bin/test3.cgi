@@ -1,7 +1,7 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3.6
  
 print("Content-type: text/html")
-print
+print("\n")
 print("<html>")
 print("<center>Hello, Linux.com!</center>")
 print("<center>Hello, Linux.com!</center>")
