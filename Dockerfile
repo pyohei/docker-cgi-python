@@ -32,7 +32,6 @@ RUN mkdir -p /var/www/cgi-bin
 COPY cgi-bin /var/www/cgi-bin
 COPY apache2 /etc/apache2
 RUN ln -s /etc/apache2/mods-available/cgi.load /etc/apache2/mods-enabled/cgi.load
-#RUN service apache2 reload
 
 EXPOSE 80
 
