@@ -17,3 +17,7 @@ docker exec -it `hash ID` /bin/bash
 
 * [Usage of docker with apache2](https://www.dockerbook.com/code/6/jekyll/apache/Dockerfile)
 * [【Linux】Rubyで書いたCGIをApacheで動かしてみる](http://note.kurodigi.com/apache-cgi/)
+
+### Licence
+
+* MIT
