@@ -13,6 +13,11 @@ docker run -p 8883:80 -d pycgi
 docker exec -it `hash ID` /bin/bash
 ```
 
+You can Access from the below URL.
+* [http://localhost:8883/cgi-bin2/test.cgi](http://localhost:8883/cgi-bin2/test.cgi)
+* [http://localhost:8883/cgi-bin2/test2.cgi](http://localhost:8883/cgi-bin2/test.cgi)
+* [http://localhost:8883/cgi-bin2/test3.cgi](http://localhost:8883/cgi-bin2/test.cgi)
+
 ### References
 
 * [Usage of docker with apache2](https://www.dockerbook.com/code/6/jekyll/apache/Dockerfile)
