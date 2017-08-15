@@ -1,4 +1,4 @@
-# docker fro cgi python(2.7, 3.6)
+# Docker for cgi with python(2.7, 3.6)
 
 This is a simple python web server settings.  
 With this docker image, you can create simple web application with cgi.  
