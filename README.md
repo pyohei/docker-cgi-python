@@ -1,4 +1,4 @@
-# Docker for cgi with python(3.6)
+# Docker for cgi with python(3.6) and Oracle Client 12
 
 This is a simple python web server settings.  
 With this docker image, you can create simple web application with cgi.  
