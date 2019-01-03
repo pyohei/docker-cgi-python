@@ -19,8 +19,6 @@ You can Access from the below URL.
 * [http://localhost:8883/cgi-bin2/test3.cgi](http://localhost:8883/cgi-bin2/test.cgi)
 
 ## Allow Python version
-
-* 2.7
 * 3.6
 
 ### References
