@@ -1,6 +1,6 @@
 # Docker file for python simple webservice build
 
-FROM ubuntu:16.10
+FROM ubuntu:18.04
 MAINTAINER Shohei Mukai
 
 Run apt-get update
