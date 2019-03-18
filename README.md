@@ -1,9 +1,10 @@
-# Docker for cgi with python(3.6) and Oracle Client 12 and CX_Oracle
+# Docker for cgi with python(2.7 / 3.6)
 
 This is a simple python web server settings.  
 With this docker image, you can create simple web application with cgi.  
 
 ## How to use
+
 ```bash
 # build image
 docker build -t pycgi .
@@ -19,6 +20,8 @@ You can Access from the below URL.
 * [http://localhost:8883/cgi-bin2/test3.cgi](http://localhost:8883/cgi-bin2/test.cgi)
 
 ## Allow Python version
+
+* 2.7
 * 3.6
 
 ### References
