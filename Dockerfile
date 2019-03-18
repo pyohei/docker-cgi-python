@@ -16,6 +16,8 @@ RUN pip install MySQL-python
 RUN apt-get -y install python3.6
 Run apt-get -y install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
+# Prevines get-pip.py install error
+RUN apt-get install python3-distutils -y
 RUN python3.6 get-pip.py
 RUN apt-get -y install python3.6-dev
 RUN python3.6 -m pip install mysqlclient
