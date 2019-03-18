@@ -13,11 +13,9 @@ RUN apt-get -y install vim
 RUN apt-get -y install python-pip
 # Python3.6
 RUN apt-get -y install python3.6
-Run apt-get -y install wget
 RUN apt-get -y install python3.6-dev python3-distutils
+Run apt-get -y install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
-# Prevines get-pip.py install error
-RUN apt-get install python3-distutils -y
 RUN python3.6 get-pip.py
 # Http settings
 ENV APACHE_RUN_USER www-data
