@@ -18,7 +18,9 @@ Run apt-get -y install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
 # Python3.7
-
+RUN apt-get -y install python3.7
+RUN apt-get -y install python3.7-dev
+RUN python3.7 get-pip.py
 # Http settings
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
