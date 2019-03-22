@@ -4,23 +4,26 @@ FROM ubuntu:18.04
 MAINTAINER Shohei Mukai
 
 Run apt-get update
-# Http
 Run apt-get -y install apache2
+
 # Python2.7
 Run apt-get -y install python2.7
 Run apt-get -y install libmysqlclient-dev
 RUN apt-get -y install vim
 RUN apt-get -y install python-pip
+
 # Python3.6
 RUN apt-get -y install python3.6
 RUN apt-get -y install python3.6-dev python3-distutils
 Run apt-get -y install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
+
 # Python3.7
 RUN apt-get -y install python3.7
 RUN apt-get -y install python3.7-dev
 RUN python3.7 get-pip.py
+
 # Http settings
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
