@@ -1,4 +1,4 @@
-# Docker(Ubuntu18.04) for cgi with python(2.7 / 3.6)
+# Docker(Ubuntu18.04) for cgi with python(2.7/3.6/3.7)
 
 This is a simple python web server settings.  
 With this docker image, you can create simple web application with cgi.  
@@ -9,26 +9,29 @@ With this docker image, you can create simple web application with cgi.
 # build image
 docker build -t pycgi .
 # run image
-docker run -p 8883:80 -d pycgi
+HASH=`docker run -p 8883:80 -d pycgi`
 # exec container
-docker exec -it `hash ID` /bin/bash
+docker exec -it $HASH /bin/bash
 ```
 
-You can Access from the below URL.
-* [http://localhost:8883/cgi-bin2/test.cgi](http://localhost:8883/cgi-bin2/test.cgi)
-* [http://localhost:8883/cgi-bin2/test2.cgi](http://localhost:8883/cgi-bin2/test.cgi)
-* [http://localhost:8883/cgi-bin2/test3.cgi](http://localhost:8883/cgi-bin2/test.cgi)
+You can Access from the below URL after run docker container.  
+
+* Shell Script ... [http://localhost:8883/cgi-bin2/sh.cgi](http://localhost:8883/cgi-bin2/sh.cgi)
+* Python2.7 ... [http://localhost:8883/cgi-bin2/py27.cgi](http://localhost:8883/cgi-bin2/py27.cgi)
+* Python3.6 ... [http://localhost:8883/cgi-bin2/py36.cgi](http://localhost:8883/cgi-bin2/py36.cgi)
+* Python3.7 ... [http://localhost:8883/cgi-bin2/py37.cgi](http://localhost:8883/cgi-bin2/py37.cgi)
 
 ## Allow Python version
 
 * 2.7
 * 3.6
+* 3.7
 
 ### References
 
 * [Usage of docker with apache2](https://www.dockerbook.com/code/6/jekyll/apache/Dockerfile)
-* [【Linux】Rubyで書いたCGIをApacheで動かしてみる](http://note.kurodigi.com/apache-cgi/)
+* [【Linux】Rubyで書いたCGIをApacheで動かしてみる](http://note.kurodigi.com/apache-cgi/)(Japanese)
 
 ### Licence
 
-* MIT
+* [MIT](https://github.com/pyohei/docker-cgi-python/blob/master/LICENSE)
