@@ -1,6 +1,6 @@
 """test script."""
-from datetime import datetime
+import platform
 
 def hoge():
-   f = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-   return "<b>{}</b>".format(f)
+   versions = platform.python_version_tuple()
+   return "<h1>Python{}.{}</h1>".format(versions[0], versions[1])
