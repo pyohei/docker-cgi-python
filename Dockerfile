@@ -3,19 +3,19 @@
 FROM ubuntu:18.04
 MAINTAINER Shohei Mukai
 
-Run apt-get update
-Run apt-get -y install apache2
+RUN apt-get update
+RUN apt-get -y install apache2
 
 # Python2.7
-Run apt-get -y install python2.7
-Run apt-get -y install libmysqlclient-dev
+RUN apt-get -y install python2.7
+RUN apt-get -y install libmysqlclient-dev
 RUN apt-get -y install vim
 RUN apt-get -y install python-pip
 
 # Python3.6
 RUN apt-get -y install python3.6
 RUN apt-get -y install python3.6-dev python3-distutils
-Run apt-get -y install wget
+RUN apt-get -y install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
 
