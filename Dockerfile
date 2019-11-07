@@ -24,6 +24,9 @@ RUN apt-get -y install python3.7
 RUN apt-get -y install python3.7-dev
 RUN python3.7 get-pip.py
 
+# Python3.8
+RUN apt-get -y install python3.8
+
 # Http settings
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
