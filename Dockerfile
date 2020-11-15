@@ -3,29 +3,36 @@
 FROM ubuntu:18.04
 MAINTAINER Shohei Mukai
 
-RUN apt-get update
-RUN apt-get -y install apache2
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update
+RUN apt -y install apache2
 
 # Python2.7
-RUN apt-get -y install python2.7
-RUN apt-get -y install libmysqlclient-dev
-RUN apt-get -y install vim
-RUN apt-get -y install python-pip
+RUN apt -y install python2.7
+RUN apt -y install libmysqlclient-dev
+RUN apt -y install vim
+RUN apt -y install python-pip
 
 # Python3.6
-RUN apt-get -y install python3.6
-RUN apt-get -y install python3.6-dev python3-distutils
-RUN apt-get -y install wget
+RUN apt -y install python3.6
+RUN apt -y install python3.6-dev python3-distutils
+RUN apt -y install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
 
 # Python3.7
-RUN apt-get -y install python3.7
-RUN apt-get -y install python3.7-dev
+RUN apt -y install python3.7
+RUN apt -y install python3.7-dev
 RUN python3.7 get-pip.py
 
 # Python3.8
-RUN apt-get -y install python3.8
+RUN apt -y install python3.8
+
+# Python3.9
+RUN apt -y install software-properties-common
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt -y install python3.9
 
 # Http settings
 ENV APACHE_RUN_USER www-data
