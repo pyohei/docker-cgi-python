@@ -1,4 +1,4 @@
-# Docker(Ubuntu18.04) for cgi with python(2.7/3.6/3.7/3.8/3.9)
+# Docker(Ubuntu20.04) for cgi with python(2.7/3.6/3.7/3.8/3.9)
 
 This is a simple python web server settings.  
 With this docker image, you can create simple web application with cgi.  

@@ -1,24 +1,28 @@
 # Docker file for python simple webservice build
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER Shohei Mukai
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update
+RUN apt -y install software-properties-common
 RUN apt -y install apache2
+RUN apt -y install wget
+
+# Install get-pip script
+RUN wget https://bootstrap.pypa.io/get-pip.py
 
 # Python2.7
 RUN apt -y install python2.7
 RUN apt -y install libmysqlclient-dev
 RUN apt -y install vim
-RUN apt -y install python-pip
+RUN python2.7 get-pip.py
 
 # Python3.6
+RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt -y install python3.6
 RUN apt -y install python3.6-dev python3-distutils
-RUN apt -y install wget
-RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
 
 # Python3.7
@@ -30,8 +34,6 @@ RUN python3.7 get-pip.py
 RUN apt -y install python3.8
 
 # Python3.9
-RUN apt -y install software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt -y install python3.9
 
 # Http settings
