@@ -1,7 +1,7 @@
 # Docker file for python simple webservice build
 
 FROM ubuntu:20.04
-MAINTAINER Shohei Mukai
+LABEL org.opencontainers.image.authors="mukaishohei76@gmail.com"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
