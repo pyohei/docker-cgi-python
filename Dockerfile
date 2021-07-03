@@ -10,19 +10,16 @@ RUN apt -y install software-properties-common
 RUN apt -y install apache2
 RUN apt -y install wget
 
-# Install get-pip script
-RUN wget https://bootstrap.pypa.io/get-pip.py
-
 # Python2.7
-RUN apt -y install python2.7
-RUN apt -y install libmysqlclient-dev
+RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+RUN apt -y install libmysqlclient-dev python3-distutils
 RUN apt -y install vim
-RUN python2.7 get-pip.py
+RUN python3 get-pip.py
 
 # Python3.6
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt -y install python3.6
-RUN apt -y install python3.6-dev python3-distutils
+RUN apt -y install python3.6-dev
 RUN python3.6 get-pip.py
 
 # Python3.7
