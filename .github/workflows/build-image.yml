@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: build and push docker image
       run: |
-        echo "${{ github.token }}" | docker login https://docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
         docker build -t pycgi .
-        docker tag pycgi:latest docker.pkg.github.com/${{ github.repository }}/pycgi:latest
-        docker push docker.pkg.github.com/${{ github.repository }}/pycgi:latest
+        docker tag pycgi:latest ghcr.io/${{ github.repository }}/pycgi:latest
+        docker push ghcr.io/docker-cgi-python/pycgi:latest
