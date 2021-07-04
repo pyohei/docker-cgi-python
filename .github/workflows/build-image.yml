@@ -15,4 +15,4 @@ jobs:
         echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
         docker build -t pycgi .
         docker tag pycgi:latest ghcr.io/${{ github.repository }}/pycgi:latest
-        docker push ghcr.io/docker-cgi-python/pycgi:latest
+        docker push ghcr.io/${{ github.repository }}/pycgi:latest
