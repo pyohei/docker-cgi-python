@@ -1,37 +1,25 @@
 # Docker file for python simple webservice build
 
 FROM ubuntu:20.04
-LABEL org.opencontainers.image.authors="mukaishohei76@gmail.com"
+LABEL org.opencontainers.image.authors="fabien.brousse@yesiddo.com"
+ADD requirements.txt /tmp/
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update
-RUN apt -y install software-properties-common
-RUN apt -y install apache2
-RUN apt -y install wget
-
-# Python2.7
-RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
-RUN apt -y install libmysqlclient-dev python3-distutils
-RUN apt -y install vim
-RUN python3 get-pip.py
-
-# Python3.6
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt -y install python3.6
-RUN apt -y install python3.6-dev
-RUN python3.6 get-pip.py
+RUN apt update && apt -y install software-properties-common apache2 wget vim
 
 # Python3.7
-RUN apt -y install python3.7
-RUN apt -y install python3.7-dev
-RUN python3.7 get-pip.py
+# RUN add-apt-repository ppa:deadsnakes/ppa && apt update
+# RUN apt -y install python3.7 python3.7-dev 
+# RUN python3.7 get-pip.py && \
+#     pip3.7 install -r /tmp/requirements.txt 
 
 # Python3.8
-RUN apt -y install python3.8
+RUN apt -y install python3.8 python3.8-dev python3-pip
+RUN pip3 install -r /tmp/requirements.txt 
 
 # Python3.9
-RUN apt -y install python3.9
+#RUN apt -y install python3.9
 
 # Http settings
 ENV APACHE_RUN_USER www-data
