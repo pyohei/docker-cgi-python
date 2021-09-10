@@ -6,7 +6,9 @@ ADD requirements.txt /tmp/
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt -y install software-properties-common apache2 wget vim
+RUN apt update && \
+apt -y install software-properties-common apache2 wget vim python3.8 python3-pip && \ 
+rm -rf /var/lib/apt/lists/*
 
 # Python3.7
 # RUN add-apt-repository ppa:deadsnakes/ppa && apt update
@@ -15,7 +17,7 @@ RUN apt update && apt -y install software-properties-common apache2 wget vim
 #     pip3.7 install -r /tmp/requirements.txt 
 
 # Python3.8
-RUN apt -y install python3.8 python3.8-dev python3-pip
+#RUN apt -y install python3.8 python3-pip
 RUN pip3 install -r /tmp/requirements.txt 
 
 # Python3.9
