@@ -1,4 +1,4 @@
-# Docker(Ubuntu20.04) for cgi with python(2.7/3.6/3.7/3.8/3.9)
+# Docker(Ubuntu20.04) for cgi with python(2.7/3.6/3.7/3.8/3.9/3.10)
 
 This is a simple python web server settings.  
 With this docker image, you can create simple web application with cgi.  
@@ -22,6 +22,7 @@ You can Access from the below URL after run docker container.
 * Python3.7 ... [http://localhost:8883/cgi-bin2/py37.cgi](http://localhost:8883/cgi-bin2/py37.cgi)
 * Python3.8 ... [http://localhost:8883/cgi-bin2/py38.cgi](http://localhost:8883/cgi-bin2/py38.cgi)
 * Python3.9 ... [http://localhost:8883/cgi-bin2/py39.cgi](http://localhost:8883/cgi-bin2/py39.cgi)
+* Python3.10 ... [http://localhost:8883/cgi-bin2/py310.cgi](http://localhost:8883/cgi-bin2/py310.cgi)
 
 ## Allow Python version
 
@@ -30,6 +31,7 @@ You can Access from the below URL after run docker container.
 * 3.7
 * 3.8
 * 3.9
+* 3.10
 
 ### References
 

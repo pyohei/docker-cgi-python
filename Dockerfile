@@ -33,6 +33,9 @@ RUN apt -y install python3.8
 # Python3.9
 RUN apt -y install python3.9
 
+# Python3.10
+RUN apt -y install python3.10
+
 # Http settings
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
