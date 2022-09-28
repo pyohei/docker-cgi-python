@@ -7,7 +7,7 @@ ADD requirements.txt /tmp/
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
-apt -y install software-properties-common apache2 wget vim python3.8 python3-pip && \ 
+apt -y install software-properties-common apache2 wget vim python3.8 python3-pip libpq-dev python-dev && \ 
 rm -rf /var/lib/apt/lists/*
 
 # Python3.7
