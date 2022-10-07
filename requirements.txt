@@ -75,3 +75,4 @@ fpdf
 pyPdf
 wkhtmltopdf
 weasyprint
+python-docx
