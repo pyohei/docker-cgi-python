@@ -76,3 +76,4 @@ pyPdf
 wkhtmltopdf
 weasyprint
 python-docx
+html
