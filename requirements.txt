@@ -43,7 +43,6 @@ SimpleITK
 Pillow
 Requests
 beautifulsoup4
-Selenium
 ScraPy
 PyTest
 pytheons.pyunit
@@ -76,4 +75,6 @@ pyPdf
 wkhtmltopdf
 weasyprint
 python-docx
-html
+mailer
+pyxirr
+py-mailsender
